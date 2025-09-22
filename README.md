@@ -5,7 +5,6 @@
 ---
 # 相关连接
 [从 0 实现一个非 websocket 版的双向通信](https://zhuanlan.zhihu.com/p/358687636)</br>
-
 ---
 
 # 体验方式:
@@ -14,3 +13,6 @@
 > 3. http-server -p ${your-port} ./
 > 4. node ./test/server/index.js
 > 5. 同时打开浏览器两个窗口, 分别访问 http://localhost:${your-port}/test/client/client1 以及 http://localhost:${your-port}/test/client/client2
+
+参考项目： https://github.com/y805939188/custom-2way-communicate.git 
+优化了UI和使用体验

@@ -2,6 +2,14 @@ const express = require('express')
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
+
+
+const corsOptions = {
+  origin: true,        // 回显 req.header('Origin')
+  credentials: true,   // 允许 Cookie / Authorization
+  optionsSuccessStatus: 200
+};
+
 class ListWatch {
   headers = {
     'Transfer-Encoding': 'chunked',
@@ -18,7 +26,7 @@ class ListWatch {
 
   constructor() {
     this.app = express();
-    this.app.use(cors());
+    this.app.use(cors(corsOptions));
     this.app.use(bodyParser.urlencoded({ extended: false }));
     this.app.use(bodyParser.json());
   }
